@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhiteBackground"
+        android:layout_gravity="center_horizontal"
+        android:textSize="32sp"
+        android:layout_marginTop="50dp"
+        android:text="奇妙二叉排序树 v1.0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhiteBackground"
+        android:layout_gravity="center_horizontal"
+        android:textSize="23sp"
+        android:layout_marginTop="120dp"
+        android:text="米浩东制作" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhiteBackground"
+        android:layout_gravity="center_horizontal"
+        android:textSize="23sp"
+        android:layout_marginTop="160dp"
+        android:text="Contact Me\nGithub: SuperAmi3401\nEmail: primemhd@outlook.com" />
+    <Button
+        android:id="@+id/button_finish_aboutapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/full_cirsquare_white"
+        android:text="返回"
+        android:textSize="23sp"
+        android:layout_marginTop="265dp"
+        />
+</FrameLayout>

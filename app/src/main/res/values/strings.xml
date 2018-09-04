@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">神奇的二叉排序树</string>
+    <string name="app_name">奇妙二叉排序树</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="action_settings">关于APP</string>
+    <string name="action_learnBST">学习二叉搜索树</string>
 </resources>

@@ -7,6 +7,7 @@
     >
 
 
+
     <!--<com.mhd.datastructure.View.CanvasView-->
     <!--android:id="@+id/canvas"-->
     <!--android:layout_width="280dp"-->
@@ -28,23 +29,29 @@
     <!--round:center_x="200dp"-->
     <!--round:center_y="200dp"-->
     <!--/>-->
+    <include
+        layout="@layout/app_bar_main"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+
     <com.mhd.datastructure.View.TreeView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
         android:layout_toEndOf="@id/rl_operationConsole"
         app:TreeMaxWidth="400dp"
         app:TreeMaxHeight="400dp"
         app:LayerMargin="20dp"
-        app:NodeRadius="10dp"
-        app:NodeRingWidth="2dp"
+        app:NodeRadius="12dp"
+        app:NodeRingWidth="3dp"
         app:TextSize="13sp"
         app:isTextDisplay="true"
         app:LineWidth="1dp"
         app:LineColor="#000000"
-        app:NodeCenterColor="#eeff06"
-        app:NodeRingColor="#e16556e6"
+        app:NodeCenterColor="#fbff00"
+        app:NodeRingColor="#47bfef"
         app:TextColor="#000000"
         />
     <RelativeLayout
@@ -98,22 +105,25 @@
         <TextView
             android:id="@+id/sign_OperationWindow"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="17dp"
             android:text="操作记录"
+            android:layout_alignStart="@id/et_DataToInsert"
             android:layout_below="@id/line_divider"
             android:layout_marginTop="3dp"
+            android:textColor="@color/wordBlack"
             />
+
         <TextView
             android:id="@+id/textView_OperationWindow"
-            android:text="cc"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_alignStart="@id/et_DataToInsert"
             android:layout_below="@id/sign_OperationWindow"
-            android:scrollbars="vertical"
-            android:scrollbarStyle="insideOverlay"
+            android:layout_marginTop="2dp"
             android:scrollbarAlwaysDrawVerticalTrack="true"
-            />
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:text="" />
         <Button
             android:id="@+id/button_confirm_insert"
             android:layout_width="85dp"

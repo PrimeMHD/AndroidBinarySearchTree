@@ -217,6 +217,8 @@ public class TreeView extends View {
                     MarginList.set(i, MarginList.get(i) - (maxLayer - i + 1) * verticalMarginDelta);
                 }
                 MarginList.remove(MarginList.size()-1);
+                break;
+                default:break;
         }
 
     }
@@ -443,8 +445,13 @@ public class TreeView extends View {
                 cur = cur.getLeftChild();
             } else if (BtnodeStack.empty()) {
                 Log.d(TAG,"localMaxLayer="+localMaxLayer);
-                maxLayer = localMaxLayer;
-                changeMarginList(CHG_ML_WHEN_DELETE);
+                if(localMaxLayer<maxLayer){
+                    maxLayer = localMaxLayer;
+                    changeMarginList(CHG_ML_WHEN_DELETE);
+
+                }
+
+
                 return;
             } else {
                 rank = RankStack.pop();

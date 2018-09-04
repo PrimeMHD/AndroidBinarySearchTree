@@ -1,5 +1,6 @@
 package com.mhd.datastructure;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Canvas;
@@ -7,24 +8,32 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.icu.lang.UCharacterEnums;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import me.yokeyword.fragmentation.SupportActivity;
+import me.yokeyword.fragmentation.SupportHelper;
 
 import com.mhd.datastructure.View.CanvasView;
 import com.mhd.datastructure.View.TreeView;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends SupportActivity {
 
     private static final String TAG = "MainActivity";
     private CanvasView canvas;
@@ -39,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_confirm_insert;
     private Button button_confirm_select;
     private BinaryTree binaryTree;
-
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 
     private void initView() {
@@ -86,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
         button_confirm_delete = (Button) findViewById(R.id.button_confirm_delete);
         button_confirm_select = (Button) findViewById(R.id.button_confirm_select);
         editText_DataToSelect = (EditText) findViewById(R.id.et_DataToSelect);
-
+        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         textView_OperationWindow.setMovementMethod(ScrollingMovementMethod.getInstance());
 
@@ -151,6 +162,33 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            startActivity(new Intent(this,Activity_AboutApp.class));
+            return true;
+        }
+        else if(id==R.id.action_learnBST){
+            startActivity(new Intent(this,Activity_LearnBST.class));
+
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
     @Override

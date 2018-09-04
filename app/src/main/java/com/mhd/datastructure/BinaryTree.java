@@ -226,14 +226,6 @@ public class BinaryTree {
             cur=stack.pop();
             if(cur.getRightChild()!=null)
                 stack.push(cur.getRightChild());
-//            try{
-//                Class innerVisitMethod=Class.forName("com.mhd.datastructure.BinaryTree$visitMethod");
-//                method.invoke(innerVisitMethod.getDeclaredConstructors()[0].newInstance(cur),cur);
-//            }
-//            catch (Exception e){
-//                e.printStackTrace();
-//            }
-            //visitNode(cur);
             VisitMethod.visit(cur,visitType);
             if(cur.getLeftChild()!=null)
                 stack.push(cur.getLeftChild());
