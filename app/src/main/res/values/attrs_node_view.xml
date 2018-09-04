@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="NodeView">-->
+        <!--<attr name="radius" format="dimension"></attr>-->
+        <!--<attr name="center_x" format="dimension"></attr>-->
+        <!--<attr name="center_y" format="dimension"></attr>-->
+        <!--<attr name="ringWidth" format="dimension"></attr>-->
+        <!--<attr name="circleColor" format="color"></attr>-->
+        <!--<attr name="ringColor" format="color"></attr>-->
+        <!--<attr name="textColor" format="color"></attr>-->
+        <!--<attr name="textOnShow" format="string"></attr>-->
+        <!--<attr name="textSize" format="dimension"></attr>-->
+
+    <!--</declare-styleable>-->
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TreeView">
+        <attr name="TreeMaxWidth" format="dimension"></attr>
+        <attr name="TreeMaxHeight" format="dimension"></attr>
+        <attr name="LayerMargin" format="dimension"></attr>
+        <attr name="NodeRadius" format="dimension"></attr>
+        <attr name="NodeCenterColor" format="color"></attr>
+        <attr name="NodeRingWidth" format="dimension"></attr>
+        <attr name="NodeRingColor" format="color"></attr>
+        <attr name="TextContent" format="integer"></attr>
+        <attr name="TextSize" format="dimension"></attr>
+        <attr name="TextColor" format="color"></attr>
+        <attr name="isTextDisplay" format="boolean"></attr>
+        <attr name="LineColor" format="color"></attr>
+        <attr name="LineWidth" format="dimension"></attr>
+    </declare-styleable>
+</resources>

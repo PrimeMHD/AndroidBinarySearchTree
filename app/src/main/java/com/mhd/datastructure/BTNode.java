@@ -1,48 +1,35 @@
 package com.mhd.datastructure;
 
 public class BTNode {
-    private int thisIndex;
-    private int leftChildIndex=0;
-    private int rightChildIndex=0;
+
+    private BTNode leftChild;
+    private BTNode rightChild;
     private int data;
 
-    public BTNode(int thisIndex, int leftChildIndex, int rightChildIndex, int data) {
-        this.thisIndex = thisIndex;
-        this.leftChildIndex = leftChildIndex;
-        this.rightChildIndex = rightChildIndex;
+    public BTNode(BTNode leftChild, BTNode rightChild, int data) {
+        this.leftChild = leftChild;
+        this.rightChild = rightChild;
         this.data = data;
     }
 
-    public BTNode(int thisIndex, int data) {
-        this.thisIndex = thisIndex;
+    public BTNode(int data) {
         this.data = data;
     }
-    BTNode(){
-        super();
+
+    public BTNode getLeftChild() {
+        return leftChild;
     }
 
-    public int getThisIndex() {
-        return thisIndex;
+    public void setLeftChild(BTNode leftChild) {
+        this.leftChild = leftChild;
     }
 
-    public void setThisIndex(int thisIndex) {
-        this.thisIndex = thisIndex;
+    public BTNode getRightChild() {
+        return rightChild;
     }
 
-    public int getLeftChildIndex() {
-        return leftChildIndex;
-    }
-
-    public void setLeftChildIndex(int leftChildIndex) {
-        this.leftChildIndex = leftChildIndex;
-    }
-
-    public int getRightChildIndex() {
-        return rightChildIndex;
-    }
-
-    public void setRightChildIndex(int rightChildIndex) {
-        this.rightChildIndex = rightChildIndex;
+    public void setRightChild(BTNode rightChild) {
+        this.rightChild = rightChild;
     }
 
     public int getData() {
